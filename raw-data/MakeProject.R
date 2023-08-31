@@ -10,13 +10,15 @@ usethis::use_build_ignore(c('data','docs','raw-data'))
 
 # Create raw-data to store all project creation instructions including this script
 dir.create(file.path(package_dir, 'raw-data'))
+# create docs to store documents
+dir.create(file.path(package_dir, 'docs'))
 
 # Create test folder with usethis, create testdata dir, and then remove test-whoop.R create initially
 usethis::use_test('whoop')
 dir.create(file.path(package_dir, 'tests', 'testthat', 'testdata'))
 file.remove(file.path(package_dir, 'tests', 'testthat', 'test-whoop.R'))
 
-# Package functions
+# Package functions. Create each file and then write code.
 
 ## FormatData
 usethis::use_r('FormatData')
@@ -47,7 +49,13 @@ df_barcodes <- BarcodeFlow::FormatData(df_barcodes, 'sample_name', 'barcode', 'd
 
 p1 <- BarcodeFlow::BasicAlluvialPlot(df_barcodes)
 
-cowplot::save_plot(p1, file.path(file.path(package_dir, 'doc', 'example.png')))
+cowplot::save_plot(file.path(file.path(package_dir, 'docs', 'example.png')), p1)
 
+# Create data object for tutorial
+df_barcodes <- read.csv(file.path(package_dir, 'tests', 'testthat', 'testdata', 'barcode_table.csv'))
 
+usethis::use_data(df_barcodes, overwrite = TRUE)
+
+# Manually fill in documentation.
+usethis::use_r('df_barcodes')
 

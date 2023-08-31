@@ -48,3 +48,5 @@ df_barcodes <- df_barcodes %>%
 
 write.csv(df_barcodes, file.path(package_dir, 'tests', 'testthat', 'testdata', 'barcode_table.csv'), row.names = FALSE)
 
+
+
