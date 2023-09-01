@@ -11,6 +11,8 @@ devtools::install_github('agmcfarland/BarcodeFlow')
 # Example
 
 ```r
+library(BarcodeFlow)
+
 data(df_barcodes, package = 'BarcodeFlow')
 
 df_barcodes <- BarcodeFlow::FormatData(df_barcodes, 'sample_name', 'barcode', 'dpi', 'proportion')
