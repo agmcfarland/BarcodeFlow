@@ -15,7 +15,10 @@ usethis::use_description(fields = list(
   ),
   Language =  "en",
   License = "MIT + file LICENSE",
-  Description = 'Simplifies making pre-arranged alluvial plots for biological data.'
+  Description = 'Simplifies making pre-arranged alluvial plots for biological data.',
+  Encoding: 'UTF-8',
+  LazyData: 'true',
+  LazyDataCompression: 'xz'
 ))
 
 usethis::use_build_ignore(c('data','docs','raw-data'))

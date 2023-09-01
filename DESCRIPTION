@@ -7,7 +7,11 @@ Authors@R:
 Description: Simplifies making pre-arranged alluvial plots for biological
     data.
 License: MIT + file LICENSE
+URL: https://github.com/agmcfarland/BarcodeFlow
+BugReports: https://github.com/agmcfarland/BarcodeFlow/issues
 Encoding: UTF-8
 Language: en
+LazyData: true
+LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
