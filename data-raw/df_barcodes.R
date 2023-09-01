@@ -1,3 +1,4 @@
+## code to prepare `df_barcodes` dataset goes here
 
 rm(list = ls())
 
@@ -48,5 +49,4 @@ df_barcodes <- df_barcodes %>%
 
 write.csv(df_barcodes, file.path(package_dir, 'tests', 'testthat', 'testdata', 'barcode_table.csv'), row.names = FALSE)
 
-
-
+usethis::use_data(df_barcodes, overwrite = TRUE)

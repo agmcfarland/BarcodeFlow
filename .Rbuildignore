@@ -1,6 +1,7 @@
 ^BarcodeFlow\.Rproj$
 ^\.Rproj\.user$
-^data$
 ^docs$
 ^raw-data$
 ^LICENSE\.md$
+^data-raw$
+^create$

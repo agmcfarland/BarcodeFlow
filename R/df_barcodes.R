@@ -3,8 +3,7 @@
 #' Barcode counts were obtained by sampling from a poisson distribution of
 #' decreasing lambda values for increase DPI values to mimic selection.
 #'
-#' @format ## `df_barcodes`
-#' A data frame with 400 rows and 7 columns:
+#' @format A data frame with 400 rows and 7 columns:
 #' \describe{
 #'   \item{barcode}{12 character ACTG barcode}
 #'   \item{sample_name}{sample name given}
@@ -14,4 +13,6 @@
 #'   \item{count}{randomly sampled count for a barcode}
 #'   \item{proportion}{calculated per sample_name and adds up to 1}
 #' }
+#' @examples
+#'   df_barcodes
 "df_barcodes"

@@ -5,8 +5,6 @@
 \alias{df_barcodes}
 \title{Dataset of randomly created barcode counts.}
 \format{
-\subsection{\code{df_barcodes}}{
-
 A data frame with 400 rows and 7 columns:
 \describe{
 \item{barcode}{12 character ACTG barcode}
@@ -18,12 +16,14 @@ A data frame with 400 rows and 7 columns:
 \item{proportion}{calculated per sample_name and adds up to 1}
 }
 }
-}
 \usage{
 df_barcodes
 }
 \description{
 Barcode counts were obtained by sampling from a poisson distribution of
 decreasing lambda values for increase DPI values to mimic selection.
+}
+\examples{
+  df_barcodes
 }
 \keyword{datasets}
