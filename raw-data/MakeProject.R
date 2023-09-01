@@ -6,6 +6,18 @@ package_dir <- '/data/BarcodeFlow'
 
 usethis::create_package(package_dir)
 usethis::use_mit_license('Alexander G. McFarland')
+usethis::use_description(fields = list(
+  "Authors@R" = utils::person(
+    "Alexander", "McFarland",
+    email = "alex.925@gmail.com",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0002-1803-3623")
+  ),
+  Language =  "en",
+  License = "MIT + file LICENSE",
+  Description = 'Simplifies making pre-arranged alluvial plots for biological data.'
+))
+
 usethis::use_build_ignore(c('data','docs','raw-data'))
 
 # Create raw-data to store all project creation instructions including this script
@@ -38,6 +50,7 @@ devtools::test(filter = 'BasicAlluvialPlot')
 
 # Run all tests
 devtools::test()
+devtools::test_coverage()
 
 devtools::document() # updates NAMESPACE
 
